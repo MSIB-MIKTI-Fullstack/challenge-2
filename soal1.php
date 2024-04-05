@@ -23,13 +23,7 @@ class Tim
 
     public function Poin(): float
     {
-        $total = 0;
-
-        foreach ($this->skor as $skor) {
-            $total += $skor;
-        }
-
-        return round($total / count($this->skor), 2);
+        return round(array_sum($this->skor) / count($this->skor), 2);
     }
 }
 
